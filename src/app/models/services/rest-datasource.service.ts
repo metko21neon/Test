@@ -1,9 +1,8 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Observable, throwError} from 'rxjs';
-import {IComment, IPost} from '../../views/post/post.component';
 import {catchError} from 'rxjs/operators';
-import {IUser} from '../../views/author-dialog/author-dialog.component';
+import {IComment, IPost, IUser} from '../interfaces/post.interfaces';
 
 @Injectable({
   providedIn: 'root'
@@ -33,6 +32,7 @@ export class RestDatasourceService {
   public addPost(post: IPost): Observable<IPost> {
     return this.http.post(this.baseUrl + 'posts/', post).pipe(catchError((error: any) => throwError(error)));
   }
+
   public deletePost(id: number): Observable<IPost> {
     return this.http.delete(this.baseUrl + `favorites/${id}`).pipe(catchError((error: any) => throwError(error)));
   }

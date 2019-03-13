@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {RestDatasourceService} from '../../models/services/rest-datasource.service';
 import {Observable} from 'rxjs';
-import {IComment, IPost} from '../post/post.component';
 import {ActivatedRoute} from '@angular/router';
+import {IComment, IPost} from '../../models/interfaces/post.interfaces';
 
 @Component({
   selector: 'app-post-details',

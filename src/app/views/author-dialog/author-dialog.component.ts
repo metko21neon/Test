@@ -2,36 +2,7 @@ import {Component, Inject, OnInit} from '@angular/core';
 import {Observable} from 'rxjs';
 import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material';
 import {RestDatasourceService} from '../../models/services/rest-datasource.service';
-
-export interface IUser {
-  id?: number;
-  name?: string;
-  username?: string;
-  email?: string;
-  address?: IAddress;
-  phone?: string;
-  website?: string;
-  company?: ICompany;
-}
-
-export interface IAddress {
-  street?: string;
-  suite?: string;
-  city?: string;
-  zipcode?: string;
-  geo?: IGeo;
-}
-
-export interface IGeo {
-  lat?: string;
-  lng?: string;
-}
-
-export interface ICompany {
-  name?: string;
-  catchPhrase?: string;
-  bs?: string;
-}
+import {IUser} from '../../models/interfaces/post.interfaces';
 
 @Component({
   selector: 'app-author-dialog',

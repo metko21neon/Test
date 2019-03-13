@@ -5,22 +5,7 @@ import {CommentsDialogComponent} from '../comments-dialog/comments-dialog.compon
 import {AuthorDialogComponent} from '../author-dialog/author-dialog.component';
 import {Subject} from 'rxjs';
 import {takeUntil} from 'rxjs/operators';
-
-export interface IPost {
-  id?: number;
-  title?: string;
-  comments?: IComment[];
-  author?: string;
-  userId?: number;
-}
-
-export interface IComment {
-  id?: number;
-  postId?: number;
-  name?: string;
-  email?: string;
-  body?: string;
-}
+import {IPost} from '../../models/interfaces/post.interfaces';
 
 @Component({
   selector: 'app-post',
