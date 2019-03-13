@@ -1,0 +1,7 @@
+<ul class="list">
+  <li *ngFor="let comment of comments$ | async">
+    <h4 class="text-capitalize"><span class="mr-2">({{comment.postId}})</span>{{comment.name}}</h4>
+    <p class="font-weight-bold px-4">{{comment.email}}</p>
+    <p class="text-capitalize px-4">{{comment.body}}</p>
+  </li>
+</ul>

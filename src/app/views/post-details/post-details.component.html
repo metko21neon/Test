@@ -1,0 +1,17 @@
+<mat-card class="p-4">
+  <mat-card-content class="mb-4">
+    <div *ngIf="post$ | async as post">
+      <h4 class="text-capitalize"><span class="mr-2">({{post.id}})</span>{{post.title}}</h4>
+    </div>
+    <ul class="list px-4 mt-3">
+      <li *ngFor="let comment of (comments$ | async)">
+        <h5 class="text-capitalize">{{comment.name}}</h5>
+        <h6 class="font-weight-bold">{{comment.email}}</h6>
+        <p class="text-capitalize">{{comment.body}}</p>
+      </li>
+    </ul>
+  </mat-card-content>
+  <mat-card-actions align="center">
+    <button  mat-raised-button color="primary" routerLink="/posts">Back to posts</button>
+  </mat-card-actions>
+</mat-card>

@@ -1,0 +1,31 @@
+<div *ngIf="user$ | async as user" class="p-4">
+  <div class="row">
+    <div class="col-6">
+      <h6>User ID: {{user.id}}</h6>
+      <h6>Name: {{user.name}}</h6>
+      <h6>Username: {{user.username}}</h6>
+      <h6>Email: {{user.email}}</h6>
+      <h6>Phone: {{user.phone}}</h6>
+      <h6>Website: {{user.website}}</h6>
+      <h6>Company:</h6>
+      <ul class="list mx-3">
+        <li>Name: {{user.company.name}}</li>
+        <li>Catch phrase: {{user.company.catchPhrase}}</li>
+        <li>Bs: {{user.company.bs}}</li>
+      </ul>
+    </div>
+    <div class="col-6">
+      <h6>Address:</h6>
+      <ul class="list mx-3">
+        <li>Street: {{user.address.street}}</li>
+        <li>Suite: {{user.address.suite}}</li>
+        <li>City: {{user.address.city}}</li>
+        <h6 >Geo:</h6>
+        <ul class="list mx-3 mt-2">
+          <li>Lat: {{user.address.geo.lat}}</li>
+          <li>Lng: {{user.address.geo.lng}}</li>
+        </ul>
+      </ul>
+    </div>
+  </div>
+</div>
